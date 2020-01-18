@@ -18,9 +18,18 @@
 				<div class="navbar-end">
 					<div class="navbar-item">
 						<div class="buttons">
-							<router-link class="button is-primary" :to="{name: 'login'}">
-								Логин
-							</router-link>
+							<template v-if="getLoggedUser">
+								<span class="logged-user__login">{{ getLoggedUser.login }}</span>
+								<button class="button is-primary" @click="logOut">
+									Выйти
+								</button>
+							</template>
+
+							<template v-else>
+								<router-link class="button is-primary" :to="{name: 'login'}">
+									Логин
+								</router-link>
+							</template>
 						</div>
 					</div>
 				</div>
@@ -30,6 +39,9 @@
 </template>
 
 <script>
+	import { mapActions, mapGetters, mapMutations } from 'vuex'
+	import * as M from '@/store/medium/mutation_types'
+
 	export default {
 		name: 'NavBar',
 
@@ -39,10 +51,30 @@
 			}
 		},
 
+		methods: {
+			...mapActions('medium', ['getPosts']),
+			...mapMutations('medium', [M.DELETE_LOGGED_USER]),
+			logOut() {
+				this[M.DELETE_LOGGED_USER]()
+			}
+		},
+
+		created() {
+			this.getPosts();
+		},
+
 		computed: {
+			...mapGetters('medium', ['getLoggedUser']),
 			active() {
 				return this.isActive ? {'is-active': true} : null
 			}
 		},
 	}
 </script>
+
+<style lang="scss" scoped>
+	.logged-user__login {
+		margin-bottom: 0.5rem;
+		margin-right: 0.5rem;
+	}
+</style>
