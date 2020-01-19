@@ -15,31 +15,121 @@
   ],
   "posts": [
     {
-      "id": 1,
-      "title": "Название поста1",
-      "description": "Текст",
-      "claps": 0,
-      "createdAt": "2019-09-29T00:00:00.000Z",
-      "updateAt": "2019-09-29T00:00:00.000Z",
-      "userId": 1
+      "title": "qwe1",
+      "description": "qwerty",
+      "claps": 2,
+      "createdAt": "2020-01-19T15:26:22.231Z",
+      "updateAt": "2020-01-19T16:46:57.689Z",
+      "userId": 1,
+      "id": 1
     },
     {
-      "id": 2,
-      "title": "Название поста2",
-      "description": "Текст",
-      "claps": 0,
-      "createdAt": "2019-09-29T00:00:00.000Z",
-      "updateAt": "2019-09-29T00:00:00.000Z",
-      "userId": 1
+      "title": "22",
+      "description": "2",
+      "claps": 1,
+      "createdAt": "2020-01-19T16:10:33.193Z",
+      "updateAt": "2020-01-19T16:10:33.193Z",
+      "userId": 1,
+      "id": 2
     },
     {
-      "id": 3,
-      "title": "Название поста3",
-      "description": "Текст",
+      "title": "3",
+      "description": "3",
       "claps": 0,
-      "createdAt": "2019-09-29T00:00:00.000Z",
-      "updateAt": "2019-09-29T00:00:00.000Z",
-      "userId": 1
+      "createdAt": "2020-01-19T16:10:44.563Z",
+      "updateAt": "2020-01-19T16:10:44.563Z",
+      "userId": 1,
+      "id": 3
+    },
+    {
+      "title": "4",
+      "description": "4",
+      "claps": 0,
+      "createdAt": "2020-01-19T16:10:52.204Z",
+      "updateAt": "2020-01-19T16:10:52.204Z",
+      "userId": 1,
+      "id": 4
+    },
+    {
+      "title": "5",
+      "description": "5",
+      "claps": 0,
+      "createdAt": "2020-01-19T16:12:16.111Z",
+      "updateAt": "2020-01-19T16:12:16.111Z",
+      "userId": 1,
+      "id": 5
+    },
+    {
+      "title": "6",
+      "description": "6",
+      "claps": 0,
+      "createdAt": "2020-01-19T16:12:20.975Z",
+      "updateAt": "2020-01-19T16:12:20.975Z",
+      "userId": 1,
+      "id": 6
+    },
+    {
+      "title": "7",
+      "description": "7",
+      "claps": 0,
+      "createdAt": "2020-01-19T16:12:27.032Z",
+      "updateAt": "2020-01-19T16:12:27.032Z",
+      "userId": 1,
+      "id": 7
+    },
+    {
+      "title": "8",
+      "description": "8",
+      "claps": 0,
+      "createdAt": "2020-01-19T16:12:31.025Z",
+      "updateAt": "2020-01-19T16:12:31.025Z",
+      "userId": 1,
+      "id": 8
+    },
+    {
+      "title": "91",
+      "description": "9",
+      "claps": 0,
+      "createdAt": "2020-01-19T16:12:36.033Z",
+      "updateAt": "2020-01-19T17:09:37.974Z",
+      "userId": 1,
+      "id": 9
+    },
+    {
+      "title": "10",
+      "description": "10",
+      "claps": 0,
+      "createdAt": "2020-01-19T16:12:49.875Z",
+      "updateAt": "2020-01-19T16:12:49.875Z",
+      "userId": 1,
+      "id": 10
+    },
+    {
+      "title": "11",
+      "description": "11",
+      "claps": 2,
+      "createdAt": "2020-01-19T17:06:58.105Z",
+      "updateAt": "2020-01-19T17:06:58.105Z",
+      "userId": 1,
+      "id": 11
+    },
+    {
+      "title": "12",
+      "description": "12errer",
+      "claps": 0,
+      "createdAt": "2020-01-19T17:07:36.550Z",
+      "updateAt": "2020-01-19T17:18:20.511Z",
+      "userId": 1,
+      "id": 12
+    },
+    {
+      "title": "12",
+      "description": "13",
+      "claps": 2,
+      "createdAt": "2020-01-19T17:09:50.071Z",
+      "updateAt": "2020-01-19T17:09:50.071Z",
+      "userId": 1,
+      "id": 13
     }
   ]
 }

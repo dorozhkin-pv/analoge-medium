@@ -19,6 +19,9 @@
 					<div class="navbar-item">
 						<div class="buttons">
 							<template v-if="getLoggedUser">
+								<router-link class="button is-success" @click="logOut" v-if="getLoggedUser.role == 'writer'" :to="{name: 'add-post'}">
+									Добавить статью
+								</router-link>
 								<span class="logged-user__login">{{ getLoggedUser.login }}</span>
 								<button class="button is-primary" @click="logOut">
 									Выйти
@@ -53,14 +56,21 @@
 
 		methods: {
 			...mapActions('medium', ['getPosts']),
-			...mapMutations('medium', [M.DELETE_LOGGED_USER]),
+			...mapMutations('medium', [M.SET_USER, M.DELETE_LOGGED_USER]),
 			logOut() {
 				this[M.DELETE_LOGGED_USER]()
+				sessionStorage.setItem('login', '')
+				if (this.$route.name != 'home') {
+					this.$router.push({name: 'home'})
+				}
 			}
 		},
 
 		created() {
-			this.getPosts();
+			this.getPosts()
+			if (sessionStorage.getItem('login')) {
+				this[M.SET_USER]({payload: JSON.parse(sessionStorage.getItem('login'))})
+			}
 		},
 
 		computed: {
@@ -68,7 +78,7 @@
 			active() {
 				return this.isActive ? {'is-active': true} : null
 			}
-		},
+		}
 	}
 </script>
 

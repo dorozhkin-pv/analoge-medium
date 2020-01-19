@@ -9,7 +9,7 @@
 			</p>
 			<small><strong>{{ createdAt }} </strong>{{ createdAt | pluralize('день назад', 'дня назад', 'дней назад') }}</small>
 		</div>
-		<component :is="permission" />
+		<component :is="permission" :id="post.id" />
 	</div>
 </template>
 

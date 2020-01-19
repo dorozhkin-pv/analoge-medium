@@ -3,6 +3,10 @@ export default {
 		return state.posts
 	},
 
+	getPostById: state => id => {
+		return state.posts.find(post => post.id == id)
+	},
+
 	getTotalCount(state) {
 		return state.totalCount
 	},

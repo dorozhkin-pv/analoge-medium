@@ -38,8 +38,8 @@
 
 		data() {
 			return {
-				email: 'writer@mail.com',
-				password: '123456',
+				email: '',
+				password: '',
 				message: ''
 			}
 		},
@@ -53,7 +53,8 @@
 				let res = this.getAllUsers.some(user => {
 					if (user.login == this.email) {
 						if (user.password == this.password) {
-							this[M.SET_USER]({payload: user})
+							sessionStorage.setItem('login', JSON.stringify(user))
+							this[M.SET_USER]({payload: JSON.parse(sessionStorage.getItem('login'))})
 							this.$router.push({name: 'home'})
 							return user.password == this.password
 						}

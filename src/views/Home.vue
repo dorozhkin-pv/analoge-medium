@@ -4,13 +4,13 @@
       <Card :post="post" />
     </div>
 
-    <!-- <Pagination :totalCount="getTotalCount"/> -->
+    <Pagination :totalCount="getTotalCount" v-if="getTotalCount > 10"/>
   </div>
 </template>
 
 <script>
   import Card from '@/components/Card'
-  //import Pagination from '@/components/Pagination'
+  import Pagination from '@/components/Pagination'
 
   import { mapGetters } from 'vuex'
 
@@ -19,13 +19,7 @@
 
     components: {
       Card,
-      //Pagination
-    },
-
-    data() {
-      return {
-
-      }
+      Pagination
     },
 
     computed: {
