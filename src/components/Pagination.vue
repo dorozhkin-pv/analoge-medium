@@ -2,7 +2,6 @@
 	<section @click="getCurrentPage">
 		<hr>
 		<b-pagination
-			
 			:total="totalCount"
 			:current.sync="current"
 			:range-before="rangeBefore"
@@ -25,6 +24,7 @@
 					:id="`page${props.page.number}`">
 			</b-pagination-button>
 			<b-pagination-button
+					style="display: none"
 					slot="previous"
 					slot-scope="props"
 					:page="props.page">
@@ -32,6 +32,7 @@
 			</b-pagination-button>
 
 			<b-pagination-button
+					style="display: none"
 					slot="next"
 					slot-scope="props"
 					:page="props.page">
@@ -70,7 +71,7 @@
 			...mapActions('medium', ['getPosts']),
 			getCurrentPage(e) {
 				let el = e.target
-				if (el.classList.contains('pagBtn') || el.classList.contains('pagination-previous') || el.classList.contains('pagination-next')) {
+				if (el.classList.contains('pagBtn')) {
 					let options = {page: this.current, limit: this.perPage}
 					this.getPosts(options)
 				}
@@ -78,6 +79,3 @@
 		}
 	}
 </script>
-<style lang="scss">
-	
-</style>

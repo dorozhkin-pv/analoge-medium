@@ -38,7 +38,7 @@
 
 		data() {
 			return {
-				email: '',
+				email: 'reader@mail.com',
 				password: '',
 				message: ''
 			}
